@@ -1,91 +1,53 @@
-
 # E-commerce QA Testing
 
-I created this manual QA practice project to work through requirements, test design, defect reporting, and follow-up validation for customer login, registration, and shopping cart features.
+Manual QA portfolio project covering requirements, test design, execution, defect management, retesting and regression across **Login, Registration and Shopping Cart**.
 
-**This is an educational simulation.** I used simulated test outcomes, defects, fixes, and an environment blocker to practice the QA workflow. Annotated screenshots illustrate the exercise; they do not establish real defects in AwesomeQA or OpenCart. Product, development and QA roles represent simulated responsibilities in an individual exercise.
+> **Training project:** Historical defects, failed outcomes, fixes and the environment blocker are documented simulations. Real checks on AwesomeQA during Sprint 2 passed; no application code was changed. Screenshots illustrate the training workflow and are not proof of real product defects.
 
-## Scope
+## Scope and tools
 
 - **Login:** valid credentials, incorrect password and empty required fields.
-- **Registration:** valid data, invalid email format, an existing email and password confirmation mismatch.
-- **Shopping cart:** adding an available product, checking product details, quantity and price, and updating quantity.
+- **Registration:** valid data, invalid email, existing email and password-confirmation mismatch.
+- **Shopping Cart:** product details, price, quantity, adding and removing items, empty cart and preservation of remaining products.
+- **Tools:** Excel and Word for manual documentation; **Jira** for stories/defects; **Testiny** for cases/runs. **Xray** is retained only as Sprint 1 history.
 
-Checkout, payments, shipping, security, performance and accessibility testing are outside this baseline.
+Checkout, payment, shipping, security, performance and accessibility testing are out of scope. This is an individual educational exercise, not production QA or a claim of implemented software fixes.
 
-## What this project demonstrates
+## Results
 
-- Connecting three requirements and 12 acceptance criteria to 11 scenarios and 12 test cases.
-- Recording expected and actual results, simulated defects and supporting evidence.
-- Distinguishing defect retesting, selected regression testing and blocked-case re-execution.
-- Mapping manual documentation to Jira stories/defects and Testiny cases/runs, with Xray retained as the historical source.
+| Cycle | Coverage | Testiny runs | Recorded results | Closure |
+|---|---|---|---|---|
+| Sprint 1 — historical | 12 unique cases | TR-1, TR-2 | TR-1: 8 Pass / 3 Fail / 1 Blocked; TR-2: 6 Pass | Completed |
+| Sprint 2 — 02 Nov 2026 | 5 new unique cases | TR-3, TR-4, TR-5 | TR-3: 2 Pass; TR-4: 2 Pass / 1 **simulated** Fail; TR-5: 3 Pass | **5/5 final Pass; Sprint closed** |
 
-## Historical results
+Sprint 1's Testiny TR-1/TR-2 **reconstruct** the 18 original Jira/Xray attempts; they are not additional application test executions. Its three simulated defects (ECOM-24/25/26) were closed, and the blocked case was re-executed. The original workbooks and closed runs are preserved.
 
-| Testiny reconstruction | Historical Xray source | Scope | Passed | Failed | Blocked |
-|---|---|---|---:|---:|---:|
-| TR-1 — Cycle 01 | ECOM-23 | 12 attempted test cases | 8 | 3 | 1 |
-| TR-2 — Cycle 02 | ECOM-27 | 6 follow-up validations | 6 | 0 | 0 |
+For Sprint 2, **ECOM-28** covered empty-field Login testing (`TC_LOGIN_004/005`, Testiny TC-13/14). **ECOM-29** covered Shopping Cart removal (`TC_CART_006/007/008`, Testiny TC-15/16/17). The simulated **BUG-004 / ECOM-30** was recorded as Failed in TR-4 and Passed on retest in TR-5, alongside two Passed regressions. All three Jira items are **Done**; TR-3/4/5 are **Closed**. Eight Sprint 2 execution records (7 Pass / 1 simulated Fail) represent **five distinct cases**, not eight.
 
-There are **12 unique test cases and 18 attempts** across both cycles. Cycle 02 comprises three defect retests, two selected login regression tests and one re-execution after the simulated blocker was removed. It is a selected follow-up, rather than a full rerun of the suite. All three simulated defects are Closed in the final documentation.
+## Documentation
 
-Testiny preserves these cycles as **TR-1** and **TR-2**, explicitly described as historical reconstructions. Their outcomes were verified against the existing manual records on 31 October 2026. They do not represent additional application test executions.
-
-The manual **Blocked** result for `TC_REG_004` was represented technically as **Executing** in the historical Xray setup. Jira workflow states such as Done are separate from test-run results.
-
-## Explore the documentation
-
-Start with the [test report](04-test-reporting/e-commerce-qa-practice-test-reporting.xlsx), especially its `Test_Summary` sheet. The `Daily_Status_01` and `Daily_Status_02` sheets preserve earlier checkpoints.
-
-| Area | Files |
+| Area | Source files |
 |---|---|
-| Requirements | [Requirements specification v1.0](01-requirements/e-commerce-qa-practice-requirements-specification-v1.0.docx) |
-| Test design | [Login](02-test-design-test-scenarios-and-test-cases/login-test-design-v1.0.xlsx), [Registration](02-test-design-test-scenarios-and-test-cases/registration-test-design-v1.0.xlsx), [Shopping cart](02-test-design-test-scenarios-and-test-cases/shopping-cart-test-design-v1.0.xlsx) |
-| Defect tracking | [Bug log](03-bug-reports/bug-log.xlsx) |
-| Simulated price defect | [BUG_001 report](03-bug-reports/bug-001-tc-cart-005/bug-001-tc-cart-005.xlsx) · [Evidence](03-bug-reports/bug-001-tc-cart-005/evidence/bug-001-tc-cart-005-evidence-01.png) |
-| Simulated login defect | [BUG_002 report](03-bug-reports/bug-002-tc-login-002/bug-002-tc-login-002.xlsx) · [Evidence](03-bug-reports/bug-002-tc-login-002/evidence/bug-002-tc-login-002-evidence-01.png) |
-| Simulated registration defect | [BUG_003 report](03-bug-reports/bug-003-tc-reg-003/bug-003-tc-reg-003.xlsx) · [Evidence](03-bug-reports/bug-003-tc-reg-003/evidence/bug-003-tc-reg-003-evidence-01.png) |
-| Simulated environment blocker | [TC_REG_004 evidence](04-test-reporting/blocked-evidence/tc-reg-004-blocked-evidence-01.png) |
+| Requirements | [Baseline requirements v1.0](01-requirements/e-commerce-qa-practice-requirements-specification-v1.0.docx) · [Sprint 2 requirements v1.1](01-requirements/e-commerce-qa-practice-requirements-specification-v1.1.docx) |
+| Sprint 1 test design | [Login](02-test-design-test-scenarios-and-test-cases/login-test-design-v1.0.xlsx) · [Registration](02-test-design-test-scenarios-and-test-cases/registration-test-design-v1.0.xlsx) · [Shopping Cart](02-test-design-test-scenarios-and-test-cases/shopping-cart-test-design-v1.0.xlsx) |
+| Sprint 1 reporting | [Historical test report](04-test-reporting/e-commerce-qa-practice-test-reporting.xlsx) — `Daily_Status_01`, `Daily_Status_02`, `Test_Summary` |
+| Sprint 2 test design | [Login v1.1](02-test-design-test-scenarios-and-test-cases/sprint-02/login-test-design-v1.1.xlsx) · [Shopping Cart v1.2](02-test-design-test-scenarios-and-test-cases/sprint-02/shopping-cart-test-design-v1.2.xlsx) |
+| Sprint 2 defect tracking | [BUG-004 report v1.1](03-bug-reports/bug-004-tc-cart-008/bug-004-tc-cart-008-v1.1.xlsx) · [Bug Log v1.2](03-bug-reports/bug-log-v1.2.xlsx) |
+| Sprint 2 reporting | [Final Test Reporting v1.2](04-test-reporting/sprint-02/e-commerce-qa-practice-test-reporting-sprint-02-v1.2.xlsx) — historical daily checkpoints retained; final `Test_Summary` |
+| Cross-tool traceability | [Traceability matrix](07-traceability/traceability.md) · [Testiny continuity](06-jira-testiny-reference/testiny-continuity.md) |
+| Evidence | [Historical Jira/Xray](05-jira-xray-reference/) · [Historical Testiny](06-jira-testiny-reference/) · [Sprint 2 Jira/Testiny (6 PNGs)](06-jira-testiny-reference/sprint-02/) |
 
-Word and Excel files retain their native formats. Download them to review the complete documents and workbook tabs. Emails and credentials in the test data are fictional training examples.
-
-## Testiny continuity and traceability
-
-The existing 12 cases were migrated from Xray to Testiny, where TR-1 and TR-2 preserve the two historical cycles. **Testiny is the continuing test-management reference; Jira remains the source of stories and defects.**
-
-- [Migration and verification note](06-testiny-reference/testiny-continuity.md), including seven Testiny screenshots.
-- [Traceability matrix](07-traceability/traceability.md), connecting REQ/AC/TS/TC, Testiny, Jira and historical Xray references, with links to source workbooks and evidence.
-
-Historical documents retain their original Jira/Xray references and results. The matrix adds Testiny identifiers without rewriting the past.
+Historical individual bug reports for [BUG-001](03-bug-reports/bug-001-tc-cart-005/bug-001-tc-cart-005.xlsx), [BUG-002](03-bug-reports/bug-002-tc-login-002/bug-002-tc-login-002.xlsx) and [BUG-003](03-bug-reports/bug-003-tc-reg-003/bug-003-tc-reg-003.xlsx), with simulated evidence in their respective `evidence/` directories, are retained. The original [Bug Log](03-bug-reports/bug-log.xlsx) and [blocked-case evidence](04-test-reporting/blocked-evidence/tc-reg-004-blocked-evidence-01.png) are also preserved.
 
 ## Traceability example
 
-`REQ-001` → `AC-001.5` → `TS_005` → `TC_CART_005` → `BUG_001_TC_CART_005`
+`REQ-001 → AC-001.9 → TS_008 → TC_CART_008 → Testiny TC-17 → TR-4 (simulated Fail) → BUG_004_TC_CART_008 / Jira ECOM-30 → TR-5 (Pass)`
 
-The continuing Testiny case is **TC-4**, linked to Jira defect **ECOM-24** in **TR-1**, with the selected retest reconstructed in **TR-2**. Historical aliases are Xray test `ECOM-13` and executions `ECOM-23` / `ECOM-27`. The expected price of **$123.20** is a laboratory test-data value.
+The [traceability matrix](07-traceability/traceability.md) maps all 17 cases to their manual IDs, Testiny records and relevant Jira/Xray references. Historical identifiers and results are not overwritten.
 
-## Jira and Xray references
+## Notes and limitations
 
-1. [Cycle 01 reference — ECOM-23](05-jira-xray-reference/01-xray-cycle-01-overall-execution.png)
-2. [Cycle 02 results — ECOM-27](05-jira-xray-reference/02-xray-cycle-02-overall-execution.png)
-3. [Defect traceability — ECOM-24](05-jira-xray-reference/03-xray-defect-traceability-example.png)
-4. [Sprint report overview](05-jira-xray-reference/04-jira-sprint-report-overview.png)
-5. [Sprint completed items](05-jira-xray-reference/05-jira-sprint-report-completed-items.png)
-6. [Final project overview](05-jira-xray-reference/06-jira-project-overview-final.png)
-
-The Cycle 01 image includes an explanatory results caption; its screenshot does not display the full result distribution. Those totals are recorded in the manual report and preserved historical Xray export. The defect image shows links to `ECOM-13` and `ECOM-23`; the follow-up execution is documented separately.
-
-The sprint contains 26 completed work items. The project overview contains 27, including Epic `ECOM-1`, closed separately according to the final report. The unusual sprint-chart spike is explained in `Test_Summary` as scope added after the declared sprint start.
-
-## Tools and limitations
-
-**Microsoft Word, Microsoft Excel, Jira, Testiny and historical Xray records** support the documented workflow. Screenshots reference the AwesomeQA training UI. Raw Xray backups remain private.
-
-This baseline preserves a historical learning exercise. It does not claim production QA experience, exhaustive test coverage, application fixes implemented by the author, or verification of the application's current behavior. Missing historical build and environment details have not been invented.
-
-## Planned V2 practice
-
-- Separate login cases for an empty email and an empty password: `TC_LOGIN_004` and `TC_LOGIN_005`, under `REQ-002 / AC-002.3 / TS_LOGIN_003`.
-- A versioned **Remove Product from Cart** exercise, starting with a new requirement and continuing through test design, a simulated defect/fix, retesting and regression.
-
-These additions are planned and are not included in V1. The completed Testiny migration and historical reconstruction are included in V1. New test-management work will use Testiny, with Jira stories/defects where applicable; Xray remains historical evidence.
+- The Sprint 1 Jira/Xray records and screenshots are historical. Testiny migration was not a full Xray configuration backup; its closed TR-1/TR-2 records reconstruct historical outcomes.
+- Screenshots are supporting references, not independent application execution logs or native service exports. Training data and user credentials are fictional.
+- Word/Excel documents remain in native formats; download them to review their full contents. The README links and repository paths should be validated in VS Code before the next GitHub commit/push.
+- No automation/CI pipeline or live software fix is claimed. A later Playwright exercise, if started, will be documented separately.
