@@ -31,7 +31,7 @@ Five new cases were created in Testiny (total **17 cases**), and three new runs 
 
 ## Evidence and reference documents
 
-- **Historical Testiny evidence** (files 01–07 in this folder): [case inventory](01-testiny-test-case-inventory.png), [TR-1](02-testiny-tr-1-historical-results.png), [TR-2](03-testiny-tr-2-historical-results.png), [TC-4 manual mapping](04-testiny-tc-4-manual-traceability.png), [TC-4 defect](05-testiny-tc-4-defect-link.png), [TC-4 requirements](06-testiny-tc-4-requirement-references.png), [TR-1 defect links](07-testiny-tr-1-defect-links.png).
+- **Historical Testiny evidence** (files 01–07 in this folder): [case inventory](01-testiny-test-case-inventory.jpg), [TR-1](02-testiny-tr-1-historical-results.jpg), [TR-2](03-testiny-tr-2-historical-results.jpg), [TC-4 manual mapping](04-testiny-tc-4-manual-traceability.jpg), [TC-4 defect](05-testiny-tc-4-defect-link.jpg), [TC-4 requirements](06-testiny-tc-4-requirement-references.jpg), [TR-1 defect links](07-testiny-tr-1-defect-links.jpg).
 - **Sprint 2 evidence:** [six Jira/Testiny screenshots](sprint-02/) covering TR-3, TR-4, TR-5, ECOM-30 closure and test-execution traceability, and the completed Sprint Report.
 - **Source mapping:** [traceability.md](../07-traceability/traceability.md) connects REQ/AC/TS/manual TC IDs with Testiny cases, Jira work items, manual workbooks and defect reports. See also the [Sprint 2 Test Reporting v1.2](../04-test-reporting/sprint-02/e-commerce-qa-practice-test-reporting-sprint-02-v1.2.xlsx).
 
